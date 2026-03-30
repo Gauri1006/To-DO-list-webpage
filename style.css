@@ -1,0 +1,116 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: 0.3s;
+}
+
+.container {
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    width: 380px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    text-align: center;
+    transition: 0.3s;
+}
+
+h1 {
+    margin-bottom: 15px;
+}
+
+.top-bar {
+    display: flex;
+    gap: 10px;
+}
+
+input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+}
+
+button {
+    padding: 10px 14px;
+    border: none;
+    border-radius: 12px;
+    background: #ff7eb3;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background: #ff4f9a;
+}
+
+.controls {
+    margin-top: 10px;
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+li {
+    background: #f8f8f8;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: fadeIn 0.3s ease;
+}
+
+li.completed span {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.actions button {
+    margin-left: 5px;
+    padding: 5px 8px;
+}
+
+#taskCount {
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+/* 🌙 Dark Mode */
+.dark {
+    background: #1e1e2f;
+    color: white;
+}
+
+.dark .container {
+    background: #2c2c3c;
+}
+
+.dark li {
+    background: #3a3a4f;
+}
+
+/* ✨ Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
